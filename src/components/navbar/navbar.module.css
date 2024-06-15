@@ -1,0 +1,81 @@
+.navbar {
+  background-color: var(
+    --secondary-color
+  ); /* White background for a clean look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* .container {
+  max-width: 1200px;
+} */
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.brandText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+}
+
+.toggler {
+  border: none;
+}
+
+.togglerIcon {
+  color: #333;
+}
+
+.collapse {
+  justify-content: space-between;
+}
+
+.navList {
+  margin-left: 18%;
+  margin-right: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navItem {
+  padding: 10px;
+}
+
+.navLink {
+  font-size: 1rem;
+  color: var(--text-color-light);
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--primary-color); /* Primary color on hover */
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.navButton {
+  background-color: var(--primary-color); /* Primary color */
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: var(--secondary-color); /* Darker shade on hover */
+}
+
+@media (max-width: 992px) {
+  .navItem {
+    padding: 10px 0;
+  }
+}
