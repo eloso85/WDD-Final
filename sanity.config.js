@@ -4,12 +4,18 @@ import { visionTool } from "@sanity/vision";
 
 import { schemaTypes } from "./sanity/schemaTypes";
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+
+console.log(projectId);
+console.log(dataset);
+
 const config = defineConfig({
   name: "default",
   title: "server-webdevducks",
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset:process.env.SANITY_DATASET,
+  projectId: projectId,
+  dataset:dataset,
   apiVersion: "2024-05-26",
 
   basePath: "/admin",

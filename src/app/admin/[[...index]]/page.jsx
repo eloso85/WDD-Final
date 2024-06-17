@@ -3,5 +3,5 @@ import config from "../../../../sanity.config.js";
 import { NextStudio } from "next-sanity/studio";
 
 export default function AdminPage() {
-  return <NextStudio config={config} />;
+  return <NextStudio config={config} />
 }
