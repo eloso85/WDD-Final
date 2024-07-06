@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
-import React,{ useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.css";
 
-import {sanityClient} from '../../../sanity/sanity-utils'
-
+import { sanityClient } from "../../../sanity/sanity-utils";
 
 const Navbar = () => {
   const [navItems, setNavItems] = useState([]);
@@ -19,21 +18,20 @@ const Navbar = () => {
         setNavItems(data);
         console.log("Data fetched and state updated:", data);
       } catch (error) {
-        console.error('Error fetching navigation data:', error);
+        console.error("Error fetching navigation data:", error);
       }
     };
 
     fetchNavigation();
   }, []);
 
-  
-  
   return (
-
     <nav className={`${styles.navbar} navbar navbar-expand-lg`}>
-      
       <div className={`container-fluid px-4 ${styles.container}`}>
-        <Link href="/" className={`navbar-brand d-flex align-items-center ${styles.brand}`}>
+        <Link
+          href="/"
+          className={`navbar-brand d-flex align-items-center ${styles.brand}`}
+        >
           <Image
             className={`d-inline-block me-2 ${styles.logo}`}
             src="/logo-removebg.png"
@@ -41,7 +39,7 @@ const Navbar = () => {
             height={40}
             alt="duck-logo"
           />
-          <span className={styles.brandText}>WebDevDucks</span>
+          <span className={styles.brandText}>WebDevDucks2</span>
         </Link>
         <button
           className={`navbar-toggler ${styles.toggler}`}
@@ -59,7 +57,6 @@ const Navbar = () => {
           id="navbarNavDropdown"
         >
           <ul className={`navbar-nav  ${styles.navList}`}>
-            
             <li className={`nav-item px-4 ${styles.navItem}`}>
               <Link href="/" className={`nav-link ${styles.navLink}`}>
                 Home
@@ -88,7 +85,10 @@ const Navbar = () => {
           </ul>
           <ul className={`navbar-nav ${styles.navRight}`}>
             <li className={`nav-item ms-lg-auto ${styles.navItem}`}>
-              <Link href="/admin" className={`btn btn-primary btn-lg ${styles.navButton}`}>
+              <Link
+                href="/admin"
+                className={`btn btn-primary btn-lg ${styles.navButton}`}
+              >
                 Login
               </Link>
             </li>
@@ -98,6 +98,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
