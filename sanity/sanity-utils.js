@@ -1,4 +1,5 @@
 import { createClient, groq } from 'next-sanity';
+import createImageUrlBuilder from '@sanity/image-url';
 
 const config = {
   projectId: "280tqh8y", // Find or replace with your project's ID

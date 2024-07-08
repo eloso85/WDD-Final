@@ -4,10 +4,10 @@ export const myStructure = (S) =>
         .items([
             // List for Navigation Settings documents
             S.listItem()
-                .title('Navigation Settings')
+                .title('Navigation')
                 .child(
                     S.documentTypeList('navigation')
-                        .title('Navigation Settings')
+                        .title('Navigation')
                 ),
             // Optional: Add other document lists or items here
         ]);
