@@ -2,6 +2,7 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
 import { myStructure } from "./sanity/deskStructure";
+import {codeInput} from '@sanity/code-input';
 
 
 
@@ -24,7 +25,7 @@ const config = defineConfig({
 
   plugins: [structureTool({
     structure: myStructure
-  }), visionTool()],
+  }), visionTool(),codeInput()],
 
   schema: {
     types: schemaTypes,

@@ -67,13 +67,36 @@ export default {
                       title: 'URL',
                     },
                   ],
+                  preview: {
+                    select: {
+                      title: 'text',
+                      subtitle: 'url'
+                    }
+                  }
                 },
               ],
-              
             },
-          ]
+          ],
+          preview: {
+            select: {
+              title: 'text',
+              subtitle: 'url'
+            }
+          }
         }
-      ]
+      ],
+      preview: {
+        select: {
+          title: 'navLinks.0.text',
+          subtitle: 'navLinks.0.url',
+        },
+        prepare({ title, subtitle }) {
+          return {
+            title: `First Link: ${title}`,
+            subtitle: `URL: ${subtitle}`,
+          };
+        }
+      }
     },
     {
       name: 'socialMedia',
